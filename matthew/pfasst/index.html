@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PFASST &mdash; PFASST v0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <link rel="top" title="PFASST v0.1.0 documentation" href="#" />
+    <link rel="next" title="Maths" href="maths.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="maths.html" title="Maths"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">PFASST v0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pfasst">
+<h1>PFASST<a class="headerlink" href="#pfasst" title="Permalink to this headline">¶</a></h1>
+<p>PFASST is an algorithm for parallelizing PDEs in time.  The PFASST
+acronym stands for <strong>Parallel Full Approximation Scheme in Space
+and Time</strong>.</p>
+<p>Parallelizing <em>N+1</em> dimensional PDEs (<em>N</em> spatial dimensions and one
+time dimension) is typically done by <strong>decomposing space</strong>.  That is,
+the spatial domain of the PDE is broken down into several pieces.
+Once this is done, the spatial operators of the PDE can be evaluated
+on each piece of the domain concurrently (ie, in parallel) at each
+time step.</p>
+<p>Another way of parallelizing PDEs is by <strong>decomposing time</strong>.</p>
+<p>To efficiently parallelize PDEs in time, PFASST brings together
+several different numerical methods in a novel way.  These
+include:</p>
+<ul class="simple">
+<li>Parareal: time decomposition for ODEs;</li>
+<li>Full Approximation Scheme (FAS): multigrid corrections for
+non-linear operators; and</li>
+<li>Spectral Deferred Corrections (SDC): an iterative time-stepping
+technique with arbitrarly high order accuracy.</li>
+</ul>
+<p>In practice, temporal parallelization is only attractive if the
+parallel efficiency is greater than (additional) spatial
+parallelization.  If, for example,</p>
+<ul class="simple">
+<li>you have more processors than you can shake a stick at;</li>
+<li>you have saturated your spatially-parallel algorithm, but need it to
+go even faster; or</li>
+<li>have a problem in which the physics can modeled with various sets of
+equations with increasing computational complexity; then</li>
+</ul>
+<p>temporal paralellization might be attractive.  Check out the <a class="reference external" href="http://www.unc.edu/~mwemmett/pfasst_gallery.html">PFASST
+gallery</a> to see some problems that PFASST has been applied to.</p>
+<p>The maths behind the PFASST algorithm are described on the
+<a class="reference internal" href="maths.html"><em>Maths</em></a> page.</p>
+<p>This work was supported by the Director, DOE Office of Science, Office
+of Advanced Scientific Computing Research, Office of Mathematics,
+Information, and Computational Sciences, Applied Mathematical Sciences
+Program, under contract DE-SC0004011.  This work is currently authored
+by <a class="reference external" href="http://amath.unc.edu/Minion/Minion">Michael L. Minion</a> and <a class="reference external" href="http://www.unc.edu/~mwemmett/">Matthew Emmett</a>.  Contributions are
+welcome &#8211; please contact <a class="reference external" href="http://www.unc.edu/~mwemmett/">Matthew Emmett</a>.</p>
+<p>This website is a work in progress!</p>
+</div>
+<div class="section" id="pypfasst">
+<h1>PyPFASST<a class="headerlink" href="#pypfasst" title="Permalink to this headline">¶</a></h1>
+<p>PyPFASST is a Python implementation of the PFASST algorithm.  This
+allows scientists to develop their code in a high-level language
+without sacrificing efficiency, as existing Fortran, C, and C++ codes
+can be called from within Python.</p>
+<p><strong>Main parts of the documentation</strong></p>
+<ul class="simple">
+<li><a class="reference internal" href="download.html"><em>Download</em></a> - download and installation instructions.</li>
+<li><a class="reference internal" href="tutorial.html"><em>Tutorial</em></a> - getting started and basic usage.</li>
+<li><a class="reference internal" href="overview.html"><em>Overview</em></a> - design and interface overview.</li>
+<li><a class="reference internal" href="reference.html"><em>Reference</em></a> - reference and API documentation.</li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>PyPFASST is released under the simplified BSD license, and is free for
+all uses as long as the copyright notices remain intact.</p>
+<p>If you would like to contribute to the development of PyPFASST,
+please, dive right in by visiting the <a class="reference external" href="https://github.com/memmett/PyPFASST">PyPFASST project page</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="#">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">PFASST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths.html">Maths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="maths.html" title="Maths"
+             >next</a> |</li>
+        <li><a href="#">PFASST v0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Matthew Emmett.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

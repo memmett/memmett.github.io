@@ -1,0 +1,39 @@
+Multilevel PFASST
+=================
+
+:Author: Matthew Emmett
+:Date: August 19 2011
+
+PyPFASST now supports multiple levels of space/time discretisations.
+For multi-level runs the levels are traversed in a V-cycle order.  For
+example, during one iteration of a 3-level PFASST run, SDC sweeps are
+performed on the levels in the following order: 0, 1, 2, 1; and the
+solution is propagated to the next processor after the sweep on the
+finest level (level 0).  This is pictured in Figure 1.
+
+.. figure:: v_cycle.png
+   :align: center
+   :alt: V cycle
+
+   Three-level PFASST run.
+
+
+Three level viscous Burger's
+----------------------------
+
+As in :doc:`coarse_sweeps`, we consider the viscous Burger's equation
+
+.. math::
+
+   u_t + u \nabla u = \nu \nabla^2 u.
+
+.. figure:: multilevel/gl.png
+   :align: center
+   :width: 600px
+   :alt: Error vs time for various iterations
+
+   Figure 1.  The
+
+
+
+

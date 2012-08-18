@@ -1,0 +1,124 @@
+
+body {
+  font-family: 'Droid Serif', serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.2;
+
+
+    margin: 0;
+    padding: 0;
+    background-color: #56a0d3;
+}
+
+#body-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+#body-container {
+    position: relative;
+    display: block;
+
+    margin: 10px;
+    padding: 50px;
+    background: white;
+    -moz-border-radius: 8px;
+}
+
+#peregrine {
+    border: 0;
+}
+
+#footer {
+    margin: 0 10px 40px 10px;
+    padding: 50px;
+    color: #56a0d3;
+    background: white;
+    opacity: 1.0;
+    -moz-border-radius: 8px;
+}
+
+#unc-logo {
+    width: 265px;
+    height: 73px;
+}
+
+#nav-icons {
+    position: absolute;
+    /* top: 88px; */
+    top: 80px;
+    right: 14px;
+}
+
+#nav-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-icons li {
+    float: left;
+    margin: 0 0.8em;
+}
+
+#nav-icons a {
+    text-decoration: none;
+    color: #56a0d3;
+    border: solid 1px #56a0d3;
+    padding: 4px;
+    margin: 0 4px;
+}
+
+.blog_post_title a {
+    color: black;
+    text-decoration: underline;
+}
+
+.figure.align-center {
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    text-align: justify;
+    width: 700px;
+}
+
+
+/*
+#nav-icons a {
+    text-decoration: none;
+    color: #56a0d3;
+}
+
+#nav-icons #download {
+    background: url(download.png) no-repeat center;
+    padding-top: 88px;
+}
+
+#nav-icons #documentation {
+    background: url(documentation.png) no-repeat center;
+    padding-top: 88px;
+}
+
+#nav-icons #blog {
+    background: url(blog.png) no-repeat center;
+    padding-top: 88px;
+}
+
+#nav-icons #home {
+    background: url(home.png) no-repeat center;
+    padding-top: 88px;
+}
+*/

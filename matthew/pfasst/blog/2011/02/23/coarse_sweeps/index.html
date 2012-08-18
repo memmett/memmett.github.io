@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <title>PFASST</title>
+    <meta name="description" lang="en" content="Parareal full approximation scheme in space and time.'"/>
+    <meta name="keywords" lang="en" content="PFASST, parareal, parallel, space, time, PDE"/>
+    <meta name="author" content="Matthew Emmett"/>
+    <link rev="made" href="mailto:memmett@unc.edu"/>
+    <link  href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"/>
+<!--    <script type="text/javascript" src="http://www.unc.edu/~mwemmett/mathjax/MathJax.js"></script> -->
+    <script type="text/javascript" src="http://www.unc.edu/~mwemmett/jsmath/easy/load.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.unc.edu/~mwemmett/pfasst/blog/css/pfasst.css"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/~mwemmett/pfasst/blog/feed" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/~mwemmett/pfasst/blog/feed/atom" />
+    <link rel='stylesheet' href='/css/pygments_murphy.css' type='text/css' />
+  </head>
+  <body>
+
+    <div id="body-container">
+      <a href="http://www.unc.edu/~mwemmett/pfasst/blog/">
+        <img id="peregrine" src="http://www.unc.edu/~mwemmett/pfasst/blog/images/peregrine.png"
+             alt="A Peregrine Falcon.  Shot at Eagle Heights Wildlife Park, Kent, England.  By Keven Law, USA."/>
+      </a>
+
+      <div id="nav-icons">
+        <ul>
+          <li><a id="home" href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a></li>
+          <li><a id="blog" href="http://www.unc.edu/~mwemmett/pfasst/blog/blog/">Blog</a></li>
+        </ul>
+      </div>
+
+      <h1>PFASST</h1>
+
+      
+
+<div class="blog_post">
+  <a name="Effect of multiple SDC sweeps per coarse propagation step" />
+  <h2 class="blog_post_title"><a href="/~mwemmett/pfasst/blog/2011/02/23/coarse_sweeps" rel="bookmark" title="Permanent Link to Effect of multiple SDC sweeps per coarse propagation step">Effect of multiple SDC sweeps per coarse propagation step</a></h2>
+  <small>February 23, 2011 at 11:00 AM | categories: 
+
+<a href='/~mwemmett/pfasst/blog/category/results'>results</a>
+</small><p/>
+  <span class="post_prose">
+    
+  <div class="document">
+<p>The effect of using a more accurate coarse propagator can be seen by
+performing multiple SDC sweeps during each coarse propagation step.</p>
+<p>Consider, for example, the viscous Burger's equation given by</p>
+$$u_t + u \nabla u = \nu \nabla^2 u$$<p>This equation is split into explicit and implicit parts according to</p>
+$$\begin{align*}
+  f_1 &amp;= -u \, \nabla u \\
+  f_2 &amp;= \nu \nabla^2 u
+\end{align*}$$<p>That is, the non-linear advection term is treated explicitly while the
+linear diffusion term is treated implicitly.  To minimize spatial
+errors (under-resolved problems will be explored later): periodic
+boundary conditions are used, all spatial operators are evaluated
+spectrally, and the computational grid is chosen so that the problem
+is well-resolved.  The initial condition used throughout is</p>
+$$u_0(x) = \exp( -x^2 / \sigma ).$$<div class="figure align-center">
+<img alt="Error vs time for various iterations" src="/~mwemmett/pfasst/blog/figures/002/error_vs_time.png" style="width: 691px;" />
+<p class="caption">Figure 1.  Maximum absolute error vs time for several PFASST
+iterations.  The left and right panels show PFASST errors for one
+and two SDC sweeps per coarse ($\mathcal{G}$) propagation step
+respectively.  Each black line represents the error at the end of
+the corresponding PFASST iteration.  The PFASST simulation is
+comprised of two levels: fine ($\mathcal{F}$) and coarse
+($\mathcal{G}$).  The red and blue lines represent the error of
+serial runs on the fine and coarse levels with varying numbers of
+SDC sweeps per time step (starting with one sweep for the topmost
+line).  The fine level is: 512 spatial points and 5 Gauss-Labotto
+SDC nodes.  The coarse level is: 256 spatial points and 3
+Gauss-Labotto SDC nodes.  The PFASST runs were performed with 64
+processors.  Parameter values used were: $\nu =$ 0.005, and $\sigma
+=$ 0.004.</p>
+</div>
+<p>Figure 1 shows two important results.  First, that the PFASST
+algorithm achieves the accuracy of the fine serial run despite the
+relatively poor accuracy of the coarse propagator (the coarse serial
+runs stop becoming more accurate after 5 SDC sweeps).  For
+well-resolved problems the accuracy of the PFASST algorithm is
+determined by the accuracy of the fine level, not the coarse level.</p>
+<p>Second, that using two SDC sweeps per coarse propagation step reduces
+the number of PFASST iterations needed to obtain a highly accurate
+solution from 9 iterations to 4 iterations.  As such, using multiple
+SDC sweeps per coarse propagation step accelerates the convergence of
+the PFASST method for well-resolved problems and fewer PFASST
+iterations are required to achieve high accuracy.  In turn, this
+results in a higher parallel speedup.</p>
+<p>Using multiple SDC sweeps per fine propagation step does not have a
+significant effect on the rate of convergence of the PFASST algorithm.</p>
+<div class="figure align-center">
+<img alt="Error vs iteration" src="/~mwemmett/pfasst/blog/figures/002/error_vs_iteration.png" style="width: 673px;" />
+<p class="caption">Figure 2.  Maximum absolute error, residual, and change in fine
+initial condition for several PFASST iterations at the final time.
+The left and right panels show PFASST errors, residuals, and change
+in fine initial conditions for one and two SDC sweeps per coarse
+($\mathcal{G}$) propagation step respectively.  The PFASST
+simulation is comprised of two levels: fine ($\mathcal{F}$) and
+coarse ($\mathcal{G}$).  The red and blue lines represent the
+error of serial runs on the fine and coarse levels with varying
+numbers of SDC sweeps per time step (starting with one sweep for
+the topmost line).  The fine level is: 512 spatial points and 5
+Gauss-Labotto SDC nodes.  The coarse level is: 256 spatial points
+and 3 Gauss-Labotto SDC nodes.  The PFASST runs were performed with
+64 processors with a final time of $T_{\rm end} =$ 0.04.
+Parameter values used were: $\nu =$ 0.005, and $\sigma =$ 0.004.</p>
+</div>
+<p>Figure 2 shows several interesting features.  First, as was
+demonstrated in Figure 1, that the PFASST algorithm achieves the
+accuracy of the fine serial run despite the relatively poor accuracy
+of the coarse propagator; and that the convergence of the PFASST
+algorithm is accelerated by using two SDC sweeps per coarse
+propagation step.</p>
+<p>Second, that the predictor is more accurate than simply performing
+single SDC sweeps in serial.</p>
+<p>Third, that for well-resolved problems the residual and change in
+initial condition are good indications of the error up to a certain
+point.  Using the residual and change in initial condition to
+adaptively control the number of iterations used will be explored
+later.</p>
+<div class="figure align-center">
+<img alt="Error vs iteration for various numbers of processors" src="/~mwemmett/pfasst/blog/figures/002/error_vs_iteration_proc.png" style="width: 668px;" />
+<p class="caption">Figure 3.  Maximum absolute error for several PFASST iterations and
+number of processors.  The left panel shows PFASST errors at the
+final time for a fixed final time.  The right panel shows PFASST
+errors at the final time for a fixed time step.  In each panel, the
+fine level is: 512 spatial points and 5 Gauss-Labotto SDC nodes.
+The coarse level is: 256 spatial points and 3 Gauss-Labotto SDC
+nodes.  Parameter values used were: $\nu =$ 0.005, and $\sigma =$
+0.004.</p>
+</div>
+<p>Finally, Figure 3 shows how the PFASST algorithm performs for various
+numbers of processors.</p>
+<p>When the final time is fixed so that increasing the number of
+processors used decreases the time step, the overall accuracy of the
+PFASST algorithm improves (up to the point where spatial error
+dominates) and the number of PFASST iterations required to achieve a
+given level of accuracy decreases.</p>
+<p>When the time step is fixed so that increasing the number of
+processors used extends the solution to later final times, the
+convergence is similar for each run regardless of the final time.
+That is, for well-resolved problems the convergence depends largely on
+the time step used, not on the number of processors.</p>
+</div>
+
+
+  </span>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_url = "http://www.unc.edu/~mwemmett/pfasst/blog/2011/02/23/coarse_sweeps";
+</script>
+
+
+    </div>
+    <div id="footer">
+      Carolina Center for Interdisciplinary Applied Mathematics<br/>Department of Mathematics
+      <p><img id="unc-logo" src="http://www.unc.edu/~mwemmett/pfasst/blog/images/unc-logo.png" alt="The University of North Carolina at Chapel Hill"/>
+    </div>
+  </body>
+</html>

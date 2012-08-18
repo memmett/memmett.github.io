@@ -1,0 +1,63 @@
+
+Matt's help file for Andria
+===========================
+
+Syncing between sputnik and your machine
+----------------------------------------
+
+1. Open up a terminal and run 'sync'.
+
+To update the sync command:
+
+1. Open up a terminal and run 'wget http://www.unc.edu/~mwemmett/sync $HOME/bin/sync'
+
+
+Dumping the database to CSV files
+---------------------------------
+
+1. Open up a terminal and cd into ~/Documents/school/dendro/database
+
+2. Run './mkcsvzip'
+
+3. The database tables will now be in 'treegrowth.zip' as CSV files.
+
+
+Backing up the database
+-----------------------
+
+1. Open up a terminal and cd into ~/Documents/school/dendro/database
+
+2. Run 'cp treegrowth.db treegrowth_YYY-MM-DD_XX.db'
+
+
+Importing transects from Excel files
+------------------------------------
+
+0. Make a backup of the database.
+
+1. Open up a terminal and cd into ~/Documents/school/dendro/database
+
+2. Run 'python import_from_excel_TYPE.py -d
+   ../data/excel/filename.xls' where TYPE is either 'ee' or
+   'numpties'.
+
+3. Look through the output to make sure everything is OK.
+
+4. Rerun the import statement, without the '-d'.
+
+
+
+Running the various PERL scripts for manipulating dendro data
+-------------------------------------------------------------
+
+You might need to sync up first...
+
+0. Make a temporary backup of your data.
+
+1. Copy the appropriate .pl file from school/dendro/data into the
+   directory where your data lives.
+
+2. Open up a terminal and cd into the directory where your data lives.
+
+3. Run 'perl foo.pl'.
+
