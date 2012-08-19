@@ -11,6 +11,7 @@ include(`head.m4')dnl
      height="150"/>
 
 <p style="font: 80% sans; margin-left: 3em; margin-top: -1em;">
+  Postdoc. Lawrence Berkeley National Lab (Computational Mathematics).<br/>
   Postdoc. University North Carolina at Chapel Hill (Applied Mathematics).<br/>
   PhD. University of Alberta (Applied Mathematics, 2010).<br/>
   MSc. University of Calgary (Applied Mathematics, 2005).<br/>
@@ -23,14 +24,19 @@ include(`head.m4')dnl
 <iframe src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqq3bl427r5i9kfuguh9tjr3atgk2n0i6stvuuk5aune5cjqmcmrkq2h9q9e57rjs802tbemthceehh5j4chmbd5pabiesjpr8mlj3f935262fprbhvd608abis8g6hvb2t28gqakcrgudmn9d7esl550e4bu7vuhd&amp;w=200&amp;h=60" frameborder="0" allowtransparency="true" width="200" height="60"></iframe>
 
 <pre>
+divert(-1)dnl
 Office:  Chapman Hall, 448
 Phone:   919-843-7901
-Email:   <a href="mailto:memmett@unc.edu">memmett@unc.edu</a>
+divert(0)dnl
+Email:   <a href="mailto:memmett@gmail.com">memmett@gmail.com</a>
+divert(-1)dnl
 Mail:    Department of Mathematics
          CB #3250, Phillips Hall
          Chapel Hill, NC, 27599
+divert(0)dnl
 CV:      <a href="MWE_CV.pdf">PDF</a>
 </pre>
+divert(0)dnl
 
 divert(-1)dnl
 <h2>Teaching</h2>
@@ -45,22 +51,23 @@ divert(0)dnl
 <h2>Current research</h2>
 
 <p>
-  I am a postdoc at UNC-CH under the supervision of
-  <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
-  My research includes
-  <a href="http://www.unc.edu/~mwemmett/pfasst/">parallel in time</a>
-  integration schemes for PDEs and high-order spatial discretizations.
+  I am a postdoc at the
+  <a href="https://ccse.lbl.gov/">CCSE</a> at the
+  <a href="http://www.lbl.gov/">LBNL</a>.
 </p>
+
+<h3>SDC + AMR</h3>
 
 <h3>Time-parallel schemes</h3>
 
 <p>
-  I am working with
-  <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>
-  on a time/space parallelization technique for PDEs called the
+  My previous postdoc was at UNC under
+  <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
+  My research there was primarily focused on the
   <a href="http://www.unc.edu/~mwemmett/pfasst/">
    <i>parallel full approximation scheme in space and time</i>
-  </a> (<a href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a>).
+  </a> (<a href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a>) 
+  scheme for parallel-in-time integration of PDEs.
 </p>
 
 <p>
