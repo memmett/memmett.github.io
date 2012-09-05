@@ -52,8 +52,8 @@ divert(0)dnl
 
 <p>
   I am a postdoc at the
-  <a href="https://ccse.lbl.gov/">CCSE</a> at the
-  <a href="http://www.lbl.gov/">LBNL</a>.
+  <a href="https://ccse.lbl.gov/">Center for Computational Sciences and Engineering</a> at the
+  <a href="http://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> in Berkeley CA.
 </p>
 
 <h3>SDC + AMR</h3>
@@ -61,13 +61,13 @@ divert(0)dnl
 <h3>Time-parallel schemes</h3>
 
 <p>
-  My previous postdoc was at UNC under
+  My previous postdoc was at the University of North Carolina at
+  Chapel Hill under the supervision of 
   <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
-  My research there was primarily focused on the
-  <a href="http://www.unc.edu/~mwemmett/pfasst/">
-   <i>parallel full approximation scheme in space and time</i>
-  </a> (<a href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a>) 
-  scheme for parallel-in-time integration of PDEs.
+  My research there was primarily focused on the <i>parallel full
+  approximation scheme in space and time</i> </a> (<a
+  href="pfasst/">PFASST</a>) scheme for parallel-in-time integration
+  of PDEs.
 </p>
 
 <p>
@@ -79,39 +79,42 @@ divert(0)dnl
   scheme used in multi-grid methods.
 </p>
 
-<p>
-  More details about the PFASST algorithm can be found on the
-  <a href="pfasst/">PFASST website</a>.
-</p>
-
+divert(-1)dnl
 <p>
   PFASST has been tested on a suite PDEs in simple geometries.  Please
   see the <a href="pfasst_gallery.html">PFASST gallery</a> for examples.
   Preliminary tests have yielded parallel efficiencies typically
   between 40-60% on various numbers of processors from 4 to 512.
 </p>
+divert(0)dnl
 
 <p>
   We are currently collaborating with:
   <ul>
     <li>
-    Dr. J. Bell and the <a href="http://ccse.lbl.gov">CCSE</a>
-    group at LBL.  We hope to apply PFASST techniques to
-    <a href="https://ccse.lbl.gov/Software/varden.html">VARDEN</a>,
-    a low-mach number fluid flow simulator developed by the CCSE.
+    Dr. J. Bell and the <a href="http://ccse.lbl.gov">CCSE</a> group
+    at LBNL.  We hope to apply SDC and PFASST techniques to various
+    codes developed at the CCSE.
 
     <li>
-    Dr. D. Ruprecht at the USI in Lugano, CH.  We have already
-    successfully applied PFASST to several geophysical flow examples,
-    and ultimately hope to apply PFASST techniques to climate and
-    weather codes.
+    Dr. D. Ruprecht at the USI in Lugano, CH.  We have successfully
+    applied PFASST to several geophysical flow examples, and
+    ultimately hope to apply PFASST techniques to climate and weather
+    codes.
+
+    <li>
+    Dr. R. Speck at the USI in Lugano, CH.  We have successfully
+    used PFASST in conjunction with the Pretty Efficient Parallel
+    Coulomb Solver
+    (<a href="http://wwwgsb.fz-juelich.de/ias/jsc/EN/AboutUs/Organisation/ComputationalScience/Simlabs/slpp/SoftwarePEPC/_node.html">PEPC</a>)
+    to solve large N-body problems on JUGENE.
   </ul>
 </p>
 
 <h3>High-order spatial reconstructions</h3>
 
 <p>
-  I am also working with
+  I have collaborated with
   <a href="http://www.kaust.edu.sa/academics/faculty/ketcheson.html">David Ketcheson</a> <i>et al.</i>
   to incorporate high-order Weighted Essentially Non-oscillatory
   (WENO) schemes into
@@ -119,9 +122,9 @@ divert(0)dnl
 </p>
 
 <p>
-  We used <a href="http://memmett.github.com/PyWENO/">PyWENO</a>
-  (of which I am the primary author) to generate high performance
-  Fortran 90 routines to perform WENO reconstructions within PyClaw.
+  <a href="http://memmett.github.com/PyWENO/">PyWENO</a>
+  (of which I am the primary author) was used to generate
+  Fortran 90 routines that perform WENO reconstructions within PyClaw.
   The routines can perform WENO reconstructions from 5th to 17th
   order.
 </p>
