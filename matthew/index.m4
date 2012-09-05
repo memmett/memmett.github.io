@@ -66,7 +66,7 @@ divert(0)dnl
   <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
   My research there was primarily focused on the <i>parallel full
   approximation scheme in space and time</i> </a> (<a
-  href="pfasst/">PFASST</a>) scheme for parallel-in-time integration
+  href="http://pypfasst.readthedocs.org/">PFASST</a>) scheme for parallel-in-time integration
   of PDEs.
 </p>
 
@@ -158,8 +158,8 @@ divert(0)dnl
 </p>
 
 <ul>
-  <li><a href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a>- the PFASST (parallel-in-time) project.</li>
-  <li><a href="http://memmett.github.com/PyWENO">PyWENO</a>- a Python implementation of WENO approximations.</li>
+  <li><a href="http://pypfasst.readthedocs.org">PFASST</a>- the PFASST (parallel-in-time) project.</li>
+  <li><a href="http://pyweno.readthedocs.org">PyWENO</a>- a Python implementation of WENO approximations.</li>
 dnl  <li><a href="http://memmett.github.com/PyBLAW">PyBLAW</a>- a Python framework for numerically solving systems of balance laws (conservation laws).</li>
   <li><a href="http://memmett.github.com/PyAsy">PyAsy</a>- a Python module for creating plots with Asymptote.</li>
 </ul>
