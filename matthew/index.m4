@@ -58,6 +58,10 @@ divert(0)dnl
 
 <h3>SDC + AMR</h3>
 
+<p>
+  
+</p>
+
 <h3>Time-parallel schemes</h3>
 
 <p>
@@ -154,22 +158,24 @@ divert(0)dnl
 <h2>Software projects</h2>
 
 <p>
-  I maintain the following software projects:
+  I maintain (or co-maintain) the following software projects:
 </p>
 
 <ul>
   <li><a href="http://pypfasst.readthedocs.org">PFASST</a>- the PFASST (parallel-in-time) project.</li>
   <li><a href="http://pyweno.readthedocs.org">PyWENO</a>- a Python implementation of WENO approximations.</li>
 dnl  <li><a href="http://memmett.github.com/PyBLAW">PyBLAW</a>- a Python framework for numerically solving systems of balance laws (conservation laws).</li>
+  <li><a href="https://launchpad.net/pydendro">PyDendro</a>- a set of Python tools for working with and analysing dendrochronological data.</li>
   <li><a href="http://memmett.github.com/PyAsy">PyAsy</a>- a Python module for creating plots with Asymptote.</li>
 </ul>
 
 <p>
-  I have also contributed to:
+  I have also contributed to a few other open source projects, including:
 </p>
 
 <ul>
   <li><a href="http://numerics.kaust.edu.sa/pyclaw/">PyClaw</a> - A Python based solver for hyperbolic PDEs that includes the algorithms of ClawPack and SharpClaw.</li>
+  <li><a href="http://fftwpp.sourceforge.net/">FFTW++</a> - A C++ library (C, Fortran, and Python callable) for computing implicitly dealiased convolutions using FFTW.</li>
 </ul>
 
 <a id="research"><h2>Other research interests</h2></ha>
@@ -201,6 +207,9 @@ dnl  <li><a href="http://memmett.github.com/PyBLAW">PyBLAW</a>- a Python framewo
 
   <li>Dendrochronology - Analysing tree-ring width data to determine
   the time of death of dead trees.</li>
+
+  <li>Population Dynamics - Modeling population dynamics using
+  Integral Projection Models (IPMs).</li>
 
 </ul>
 
