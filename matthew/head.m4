@@ -1,10 +1,4 @@
-divert(-1)dnl
-#
-# $Id: head.m4,v 1.1 2006/10/16 03:20:53 memmett Exp $
-#
-
-divert(0)dnl
-ifelse(_php,`t',<?= '<?xml version="1.0"?>' ?>, `<?xml version="1.0"?>')
+<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -17,19 +11,26 @@ ifelse(_php,`t',<?= '<?xml version="1.0"?>' ?>, `<?xml version="1.0"?>')
     <meta name="author" content="_author"/>
     <link rev="made" href="mailto:_authoremail"/>
     <link rel="stylesheet" type="text/css" href="_stylesheet"/>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript"
       src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    _head
   </head>
   <body>
     <a id="top"></a>
 
-    <div id="content">
-    <!-- content -->
-
-    <!-- header -->
-    <div id="header">
-      <h1>_title</h1>
+    <div id="banner">
+      <a href="index.html">MATTHEW EMMETT</a>
     </div>
-    <!-- header -->
 
+    <div id="navigation">
+dnl      <a href="contact.html">Contact</a>
+dnl      <a href="education.html">Education</a>
+      <a href="research.html">&gt; Research</a>
+      <a href="software.html">&gt; Software</a>
+      <a href="teaching.html">&gt; Teaching</a>
+dnl      <a href="personal.html">Personal</a>
+    </div>
+
+    <div id="content">

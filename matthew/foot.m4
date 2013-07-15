@@ -1,5 +1,3 @@
-    <!-- content -->
     </div>
-
   </body>
 </html>

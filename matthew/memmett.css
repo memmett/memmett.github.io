@@ -3,22 +3,71 @@
  */
 
 body {
-  font-family: 'Droid Serif', serif;
-  background: url(nsask.jpg);
-  /* background: black; */
+  font-family: 'Open Sans', sans-serif;
+  background: white;
   text-align: justify;
 }
 
-#content {
-  width: 800px;
-  padding: 30px;
-  margin: 20px auto;
-  background: white;
-  background: rgba(255,255,255,0.9);
-  border-radius: 8px;
+#banner {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18pt;
+  float: left;
+  padding: 20px 0;
 }
 
-#header h1 {
-  margin: 0 0 0.5em 0;
-  padding: 0;
+#banner a {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: black;
+}
+
+#banner a:hover {
+  color: blue;
+}
+
+
+#navigation {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18pt;
+  float: right;
+  padding: 20px 0;
+}
+
+#navigation a {
+  padding-right: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+#navigation a:hover {
+  color: blue;
+}
+
+#content {
+  clear: both;
+  /* width: 100%; */
+  padding: 40px 110px 60px 110px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+
+h2 {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 24pt;
+  position: relative;
+  left: -0.5em;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 18pt;
+  text-rendering: optimizeLegibility;
+}
+
+td {
+  padding-right: 20px;
 }
