@@ -6,10 +6,42 @@ include(`head.m4')dnl
 
 <h3>SDC + AMR</h3>
 
-<p>
-  
-</p>
+<p>Spectral Deferred Correction (SDC) scheme are iterative methods for
+marching time-dependent problems through time.  SDC methods construct
+high-order solutions within one timestep by iteratively approximating
+a series of correction equations at collocation nodes using low-order
+substepping methods.  SDC schemes converge to the collocation solution
+(implicit Runge-Kutta schemes).
 
+<p>Multi-level SDC (MLSDC) schemes use a hierarchy of SDC schemes with
+varying number of collocation nodes to solve the collocation equation
+on the finest MLSDC level (ie, the level with the most SDC nodes) by
+cycling throught the MLSDC hierarchy in a V-cycle.  Coarse and fine
+resolution SDC solutions on different MLSDC levels are coupled in the
+same manner as used in the full approximation scheme (FAS) method
+popular in multigrid methods for nonlinear problems.
+
+<p>For example, the collocation nodes of a three level MLSDC scheme
+with 3, 5, and 9 Gauss-Lobatto collocation nodes on the coarse,
+middle, and fine levels has the following node hierarchy:
+
+<center>
+  <img src="mlpts.png"/><br/>
+</center>
+
+<p>For Adaptive Mesh Refinement (AMR) schemes with many levels of
+spatial refinement, a plain MLSDC scheme would suffer from exponential
+growth of SDC nodes as new levels of spatial refinement are added.
+
+<p>However, the benefit of MLSDC in an AMR setting is that the
+coupling of the AMR is increased due to iterative nature of MLSDC and
+the incorporation of FAS corrections between levels: boundary
+conditions between refinement patches become higher order.
+
+<p>My research in this area is currently focused on creating a new
+MLSDC hierarchy that includes the benefits of the MLSDC FAS
+corrections, but without the exponential growth of SDC nodes.
+  
 <h3>Time-parallel schemes</h3>
 
 <p>
@@ -18,7 +50,7 @@ include(`head.m4')dnl
   <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
   My research there was primarily focused on the <i>parallel full
   approximation scheme in space and time</i> </a> (<a
-  href="http://pypfasst.readthedocs.org/">PFASST</a>) scheme for parallel-in-time integration
+  href="http://libpfasst.readthedocs.org/">PFASST</a>) scheme for parallel-in-time integration
   of PDEs.
 </p>
 
@@ -90,18 +122,8 @@ divert(0)dnl
 <h2>Publications</h2>
 
 <p>
-  Please see my <a href="http://www.mendeley.com/profiles/matthew-emmett/">Mendeley page</a> for a list of my publications.
+  Please see my <a href="http://scholar.google.com/citations?user=Ko4HnnQAAAAJ&hl=en">Google scholar page</a> for a list of my publications.
 </p>
-
-divert(-1)dnl
-<h2>Local resources</h2>
-
-<ul>
-  <li><a href="unix.html">UN*X</a> notes for the Dept. of Math & Stats at the U. of Alberta.</li>
-  <li><a href="outreach/">Outreach</a> puzzles for the GAME Outreach program.</li>
-dnl  <li><a href="tex.html">TeX</a> notes for assignments, labs, and presentations.</li>
-</ul>
-divert(0)dnl
 
 
 <a id="research"><h2>Other research interests</h2></ha>
@@ -138,68 +160,5 @@ divert(0)dnl
   Integral Projection Models (IPMs).</li>
 
 </ul>
-
-divert(-1)dnl
-
-<p>
-  Currently my research is focused on numerical methods for solving
-  PDEs.  More specifically, I am working with
-  <a href="http://amath.unc.edu/Minion/Minion">Michael L. Minion</a>
-
-  on a <strong>parallel in time</strong> method for PDEs called
-
-  <a href="http://www.unc.edu/~mwemmett/pfasst/">PFASST</a>.
-
-  Eventually we hope to parallelize
-
-  <a href="https://ccse.lbl.gov/Software/varden.html">VARDEN</a>,
-
-  a low-mach number fluid flow simulator developed by the
-
-  <a href="http://ccse.lbl.gov">CCSE</a>
-
-  group at LBL, in time.
-</p>
-
-<p>
-  I am also working with
-
-  <a href="http://www.kaust.edu.sa/academics/faculty/ketcheson.html">David Ketcheson</a> <i>et al.</i>
-
-  to incorporate high-order WENO schemes into
-
-  <a href="http://numerics.kaust.edu.sa/pyclaw/">PyClaw</a>.
-</p>
-
-<p>My other research interests include:</p>
-
-<ul>
-
-  <li>Numerical Analysis - Efficient implementation of Finite Volume
-  schemes.  Weighted Essentially Non-Oscillatory schemes for
-  hyperbolic systems.</li>
-
-  <li>Partial Differential Equations - Systems of hyperbolic
-  conservation and balance laws, perturbation theory, Sobolev spaces,
-  and weak solutions.</li>
-
-  <li>Fluid Mechanics - Fluid dynamics, geophysical and environmental
-  flows, gravity currents and sediment transport, free boundary flows
-  and surface tension, turbulence, and applications in biology.</li>
-
-  <li>Non-linear Dynamics and Chaos - Fixed point stability,
-  bifurcations, and simple examples of the onset of chaos.</li>
-
-  <li>Differentiable Manifolds - Hamiltonian mechanics, Lie groups,
-  holonomic and non-holonomic reduction of constraints.</li>
-
-  <li>Traffic Modeling - Incorporating stochastic phenomena into
-  hyperbolic models of traffic flow.</li>
-
-  <li>Dendrochronology - Analysing tree-ring width data to determine
-  the time of death of dead trees.</li>
-
-</ul>
-divert(0)dnl
 
 include(`foot.m4')
