@@ -1,5 +1,5 @@
 
-all: index.html research.html software.html teaching.html riemann.html
+all: index.html research.html software.html teaching.html
 
 %.html: %.m4 defaults.m4 head.m4 foot.m4
 	m4 $< > $@

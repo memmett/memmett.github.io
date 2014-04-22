@@ -2,6 +2,12 @@ include(`defaults.m4')dnl
 define(`_title', `Matthew Emmett - Research')dnl
 include(`head.m4')dnl
 
+<h2>Publications</h2>
+
+<p>
+  Please see my <a href="http://scholar.google.com/citations?user=Ko4HnnQAAAAJ&hl=en">Google scholar page</a> for a list of my publications.
+</p>
+
 <h2>Current research</h2>
 
 <h3>SDC + AMR</h3>
@@ -41,12 +47,12 @@ conditions between refinement patches become higher order.
 <p>My research in this area is currently focused on creating a new
 MLSDC hierarchy that includes the benefits of the MLSDC FAS
 corrections, but without the exponential growth of SDC nodes.
-  
+
 <h3>Time-parallel schemes</h3>
 
 <p>
   My previous postdoc was at the University of North Carolina at
-  Chapel Hill under the supervision of 
+  Chapel Hill under the supervision of
   <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
   My research there was primarily focused on the <i>parallel full
   approximation scheme in space and time</i> </a> (<a
@@ -119,14 +125,7 @@ divert(0)dnl
   methods and performing high-order WENO reconstructions.
 </p>
 
-<h2>Publications</h2>
-
-<p>
-  Please see my <a href="http://scholar.google.com/citations?user=Ko4HnnQAAAAJ&hl=en">Google scholar page</a> for a list of my publications.
-</p>
-
-
-<a id="research"><h2>Other research interests</h2></ha>
+<h2>Other research interests</h2>
 
 <p>My other research interests include:</p>
 

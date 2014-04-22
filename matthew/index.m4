@@ -15,14 +15,8 @@ divert(0)
   <a href="http://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> in Berkeley, California.
 </p>
 
-<p>
-  I am a Canadian citizen.
-</p>
 
-<p>A PDF version of my curriculum vitae is available here: <a
-  href="MWE_CV.pdf">MWE_CV</a>.  This website is a companion to my CV,
-  and augments it with extra visuals and links.
-</p>
+<p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
 
 
 <h2>Education</h2>
@@ -74,25 +68,12 @@ divert(0)
   <tr>
     <td>BSc</td>
     <td>Simon Fraser University.</td>
-  </tr>  
+  </tr>
   <tr>
     <td></td>
     <td><strong>Mathematical Physics</strong> with First Class Honours.</td>
   </tr>
 </table>
-
-divert(-1)dnl
-  <li>Postdoc. University North Carolina at Chapel Hill (Applied
-  Mathematics).<br/> Dr. M. Minion, 2010-2012.
-
-  <li>PhD. University of Alberta (Applied Mathematics, 2010).<br/>
-  Dr. B. Moodie.  Fluid mechanics (shallow-water sediment transport)
-  and numerical analysis (WENO methods).
-
-  <li>MSc. University of Calgary (Applied Mathematics, 2005).
-  <li>BSc. Simon Fraser University (Mathematical Physics, 2001).
-</ul>
-divert(0)dnl
 
 <h2>Contact</h2>
 
@@ -105,17 +86,5 @@ Mail:    MS 50A1148
          1 Cyclotron Rd
 	 Berkeley, CA 94720
 </pre>
-divert(0)dnl
-
-divert(-1)dnl
-<h2>Teaching</h2>
-
-<p>Currently, I am not teachingy courses.</p>
-
-<ul>
-  <li><a href="m101_09w/">MATH 101 (EV1) - Winter 2009</a></li>
-</ul>
-divert(0)dnl
-
 
 include(`foot.m4')

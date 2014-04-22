@@ -22,6 +22,7 @@
 
     <div id="banner">
       <a href="index.html">MATTHEW EMMETT</a>
+      <img id="canadian" width="32" alt="I am Canadian" title="I am Canadian" src="http://upload.wikimedia.org/wikipedia/commons/3/31/553px-lib_maple_leaf.png"/>
     </div>
 
     <div id="navigation">

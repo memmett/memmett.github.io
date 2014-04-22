@@ -22,6 +22,7 @@
 
     <div id="banner">
       <a href="index.html">MATTHEW EMMETT</a>
+      <img id="canadian" width="32" alt="I am Canadian" title="I am Canadian" src="http://upload.wikimedia.org/wikipedia/commons/3/31/553px-lib_maple_leaf.png"/>
     </div>
 
     <div id="navigation">
@@ -32,6 +33,7 @@
 
     <div id="content">
 
+<h2>Philosophy</h2>
 
 <p>My goal as a teacher is to affect change in students.  I endeavour
 to be an enthusiastic guide and resource for their learning
@@ -47,7 +49,7 @@ and labs, and coordinating and delivering outreach activities.  I am
 technically saavy and can create novel and interactive online tools to
 complement and enhance classroom activities.</p>
 
-<h2>Teaching experience</h2>
+<h2>Experience</h2>
 
 <table>
   <tr>
@@ -142,10 +144,10 @@ example we consider the function \[f(x) = 1 + \frac{8}{10} x^3\] drawn
 in red and integrate it from -1 to 1.  The blue rectangles represent
 the terms of the (approximate) Riemann sum.</p>
 
-<p>Use the controls below to increase/decrease the number of terms
-\(N\) in the Riemann sum, and alter the \(\alpha\) parameter used to
-determine where the function is sampled within each cell.  The value
-\(R(\alpha, N)\) of the Riemann sum is updated accordingly.</p>
+<p>Using the controls below to increase/decrease the number of terms
+\(N\) in the Riemann sum, and to alter the \(\alpha\) parameter used
+to determine where the function is sampled within each cell, we can
+see a visual representation of the Riemann sum \(R(\alpha, N)\) above.</p>
 
 <form action="#"><table>
 <tr><td>\(N\):</td>
@@ -163,9 +165,3 @@ determine where the function is sampled within each cell.  The value
 
 <script type="text/javascript" src="riemann.js"></script>
 
-<p>Some things to consider:
-<ul>
-<li>What is the value of the integral?
-<li>The function is monotonic (and increasing).  Show that \[ R(0, N) \leq \int_{-1}^{1} f(x) \,dx \leq R(1, N).\]
-<li>Why does \(\alpha = 0.5\) do such a good job of approximating the integral, even for small \(N\)?
-</ul>
