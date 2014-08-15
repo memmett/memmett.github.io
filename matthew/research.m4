@@ -10,9 +10,9 @@ include(`head.m4')dnl
 
 <h2>Current research</h2>
 
-<h3>SDC + AMR</h3>
+<h3>MLSDC + AMR</h3>
 
-<p>Spectral Deferred Correction (SDC) scheme are iterative methods for
+<p>Spectral Deferred Correction (SDC) schemes are iterative methods for
 marching time-dependent problems through time.  SDC methods construct
 high-order solutions within one timestep by iteratively approximating
 a series of correction equations at collocation nodes using low-order
@@ -35,18 +35,29 @@ middle, and fine levels has the following node hierarchy:
   <img src="mlpts.png"/><br/>
 </center>
 
-<p>For Adaptive Mesh Refinement (AMR) schemes with many levels of
-spatial refinement, a plain MLSDC scheme would suffer from exponential
-growth of SDC nodes as new levels of spatial refinement are added.
+divert(-1)dnl
+<p>The benefit of MLSDC in an AMR setting is that the coupling of the
+AMR is increased due to iterative nature of MLSDC and the
+incorporation of FAS corrections between levels: boundary conditions
+between refinement patches become higher order.
+divert(0)dnl
 
-<p>However, the benefit of MLSDC in an AMR setting is that the
-coupling of the AMR is increased due to iterative nature of MLSDC and
-the incorporation of FAS corrections between levels: boundary
-conditions between refinement patches become higher order.
+<p>I am currently developing an MLSDC+AMR solver for the
+multicomponent, compressible reacting Navier-Stokes equation called
+RNS.  RNS will be fourth order accurate in both space and time and
+will showcase the MLSDC+AMR technique for combustion problems.  A
+preliminary version of the code was used to create the movie below,
+which shows a volume rendering of the vorticity resulting from a
+turbulent jet.  This simulation was run across several thousand cores
+of the Edison supercomputer at NERSC.
 
-<p>My research in this area is currently focused on creating a new
-MLSDC hierarchy that includes the benefits of the MLSDC FAS
-corrections, but without the exponential growth of SDC nodes.
+<center>
+  <iframe width="420" height="315" src="//www.youtube.com/embed/X984oHaQYcE" frameborder="0" allowfullscreen></iframe>
+</center>
+
+divert(-1)dnl
+<h3>Multirate SDC</h3>
+divert(0)dnl
 
 <h3>Time-parallel schemes</h3>
 
