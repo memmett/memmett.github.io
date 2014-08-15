@@ -16,7 +16,9 @@ divert(0)
 </p>
 
 
+divert(-1)dnl
 <p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
+divert(0)dnl
 
 
 <h2>Education</h2>
