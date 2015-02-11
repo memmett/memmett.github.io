@@ -10,6 +10,8 @@ include(`head.m4')dnl
 
 <h2>Current research</h2>
 
+In the news at LBL: <a href="https://crd.lbl.gov/news-and-publications/news/2014/crd-researchers-give-combustion-system-design-a-boost/">CRD Researchers Give Combustion System Design a Boost -- Optimized Algorithms Help Methane Flame Simulations Run 6x Faster on NERSC Supercomputer</a>.
+
 <h3>MLSDC + AMR</h3>
 
 <p>Spectral Deferred Correction (SDC) schemes are iterative methods for
