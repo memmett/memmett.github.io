@@ -10,9 +10,8 @@ divert(-1)
 divert(0)
 
 <p>
-  I am a postdoc at the
-  <a href="https://ccse.lbl.gov/">Center for Computational Sciences and Engineering</a> at the
-  <a href="http://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> in Berkeley, California.
+  I am a Reservoir Simulation Scientist (Computational Mathematics)
+  at the <a href="http://www.cmgl.ca/">Computer Modelling Group Ltd.</a> in Calgary, Alberta.
 </p>
 
 
@@ -27,11 +26,11 @@ divert(0)dnl
   <!-- lbl -->
   <tr>
     <td style="width:70px;">Postdoc</td>
-    <td>Lawrence Berkeley National Lab with <strong>Dr. J. Bell</strong>.</td>
+    <td><a href="https://ccse.lbl.gov/">Center for Computational Sciences and Engineering</a>, Lawrence Berkeley National Lab with <strong>Dr. J. Bell</strong>.</td>
   </tr>
   <tr>
     <td></td>
-    <td><strong>Computational Mathematics</strong> (see my <a href="research.html">research</a> page).</td>
+    <td><strong>Computational Mathematics</strong>.</td>
   </tr>
   <tr><td>&nbsp;</td></tr>
   <!-- unc -->
@@ -41,7 +40,7 @@ divert(0)dnl
   </tr>
   <tr>
     <td></td>
-    <td><strong>Applied Mathematics</strong> (see my <a href="research.html">research</a> page).</td>
+    <td><strong>Computational Mathematics</strong>.</td>
   </tr>
   <tr><td>&nbsp;</td></tr>
   <!-- uofa -->
@@ -51,8 +50,7 @@ divert(0)dnl
   </tr>
   <tr>
     <td></td>
-    <td><strong>Applied Mathematics</strong>.  Fluid mechanics
-        (shallow-water sediment transport) and numerical analysis (WENO methods).</td>
+    <td><strong>Applied Mathematics</strong>.</td>
   </tr>
   <tr><td>&nbsp;</td></tr>
   <!-- uofc -->
@@ -62,8 +60,7 @@ divert(0)dnl
   </tr>
   <tr>
     <td></td>
-    <td><strong>Applied Mathematics</strong>.  Differentiable manifolds and Hamiltonian
-        mechanics (non-holonomic reduction).</td>
+    <td><strong>Applied Mathematics</strong>.</td>
   </tr>
   <tr><td>&nbsp;</td></tr>
   <!-- sfu -->
@@ -73,20 +70,14 @@ divert(0)dnl
   </tr>
   <tr>
     <td></td>
-    <td><strong>Mathematical Physics</strong> with First Class Honours.</td>
+    <td><strong>Mathematical Physics</strong>.</td>
   </tr>
 </table>
 
 <h2>Contact</h2>
 
 <pre>
-Office:  050A-1135, LBNL
-Phone:   510-486-5835
 Email:   <a href="mailto:memmett@gmail.com">memmett@gmail.com</a>
-Mail:    MS 50A1148
-         Lawrence Berkeley National Laboratory
-         1 Cyclotron Rd
-	 Berkeley, CA 94720
 </pre>
 
 include(`foot.m4')

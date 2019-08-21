@@ -22,16 +22,16 @@
 
     <div id="banner">
       <a href="index.html">MATTHEW EMMETT</a>
-      <img id="canadian" width="32" alt="I am Canadian" title="I am Canadian" src="http://upload.wikimedia.org/wikipedia/commons/3/31/553px-lib_maple_leaf.png"/>
+dnl      <img id="canadian" width="32" alt="I am Canadian" title="I am Canadian" src="http://upload.wikimedia.org/wikipedia/commons/3/31/553px-lib_maple_leaf.png"/>
     </div>
 
-    <div id="navigation">
+dnl    <div id="navigation">
 dnl      <a href="contact.html">Contact</a>
 dnl      <a href="education.html">Education</a>
-      <a href="research.html">&gt; Research</a>
-      <a href="software.html">&gt; Software</a>
-      <a href="teaching.html">&gt; Teaching</a>
+dnl      <a href="research.html">&gt; Research</a>
+dnl      <a href="software.html">&gt; Software</a>
+dnl      <a href="teaching.html">&gt; Teaching</a>
 dnl      <a href="personal.html">Personal</a>
-    </div>
+dnl    </div>
 
     <div id="content">

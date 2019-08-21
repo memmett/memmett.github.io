@@ -8,7 +8,7 @@ include(`head.m4')dnl
   Please see my <a href="http://scholar.google.com/citations?user=Ko4HnnQAAAAJ&hl=en">Google scholar page</a> for a list of my publications.
 </p>
 
-<h2>Current research</h2>
+<h2>Previous research</h2>
 
 In the news at LBL: <a href="https://crd.lbl.gov/news-and-publications/news/2014/crd-researchers-give-combustion-system-design-a-boost/">CRD Researchers Give Combustion System Design a Boost -- Optimized Algorithms Help Methane Flame Simulations Run 6x Faster on NERSC Supercomputer</a>.
 
@@ -54,7 +54,7 @@ turbulent jet.  This simulation was run across several thousand cores
 of the Edison supercomputer at NERSC.
 
 <center>
-  <iframe width="420" height="315" src="//www.youtube.com/embed/X984oHaQYcE" frameborder="0" allowfullscreen></iframe>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/X984oHaQYcE" frameborder="0" allowfullscreen></iframe>
 </center>
 
 divert(-1)dnl
@@ -66,10 +66,10 @@ divert(0)dnl
 <p>
   My previous postdoc was at the University of North Carolina at
   Chapel Hill under the supervision of
-  <a href="http://amath.unc.edu/Minion/Minion">Michael Minion</a>.
+  <a href="https://crd.lbl.gov/departments/applied-mathematics/departmental-staff/michael-minion/">Michael Minion</a>.
   My research there was primarily focused on the <i>parallel full
   approximation scheme in space and time</i> </a> (<a
-  href="http://libpfasst.readthedocs.org/">PFASST</a>) scheme for parallel-in-time integration
+  href="https://pfasst.lbl.gov/">PFASST</a>) scheme for parallel-in-time integration
   of PDEs.
 </p>
 
@@ -89,7 +89,6 @@ divert(-1)dnl
   Preliminary tests have yielded parallel efficiencies typically
   between 40-60% on various numbers of processors from 4 to 512.
 </p>
-divert(0)dnl
 
 <p>
   We are currently collaborating with:
@@ -113,6 +112,7 @@ divert(0)dnl
     to solve large N-body problems on JUGENE.
   </ul>
 </p>
+divert(0)dnl
 
 <h3>High-order spatial reconstructions</h3>
 
