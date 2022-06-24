@@ -10,8 +10,8 @@ divert(-1)
 divert(0)
 
 <p>
-  I am a Reservoir Simulation Scientist (Computational Mathematics)
-  at the <a href="http://www.cmgl.ca/">Computer Modelling Group Ltd.</a> in Calgary, Alberta.
+  I am a Senior Member of the Technical Staff (SMTS)
+  at <a href="https://www.amd.com/">AMD</a> (Advanced Micro Devices).
 </p>
 
 
@@ -19,6 +19,12 @@ divert(-1)dnl
 <p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
 divert(0)dnl
 
+<h2>Work</h2>
+
+<p>
+From 2015 to 2020, I was a Reservoir Simulation Scientist (Computational Mathematics)
+at the <a href="http://www.cmgl.ca/">Computer Modelling Group Ltd.</a> in Calgary, Alberta.
+</p>
 
 <h2>Education</h2>
 
@@ -77,7 +83,7 @@ divert(0)dnl
 <h2>Contact</h2>
 
 <pre>
-Email:   <a href="mailto:memmett@gmail.com">memmett@gmail.com</a>
+Email:   <a href="mailto:matthew@emmett.ca">matthew@emmett.ca</a>
 </pre>
 
 include(`foot.m4')
