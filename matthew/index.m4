@@ -9,22 +9,20 @@ divert(-1)
      height="150"/>
 divert(0)
 
-<p>
-  I am a Senior Member of the Technical Staff (SMTS)
-  at <a href="https://www.amd.com/">AMD</a> (Advanced Micro Devices).
-</p>
-
-
-divert(-1)dnl
-<p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
-divert(0)dnl
-
 <h2>Work</h2>
+
+<p>
+I am a Senior Member of the Technical Staff (SMTS) at <a href="https://www.amd.com/">AMD</a> (Advanced Micro Devices).
+</p>
 
 <p>
 From 2015 to 2020, I was a Reservoir Simulation Scientist (Computational Mathematics)
 at the <a href="http://www.cmgl.ca/">Computer Modelling Group Ltd.</a> in Calgary, Alberta.
 </p>
+
+divert(-1)dnl
+<p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
+divert(0)dnl
 
 <h2>Education</h2>
 
