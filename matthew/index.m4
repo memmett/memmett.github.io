@@ -24,6 +24,10 @@ divert(-1)dnl
 <p>A PDF version of my curriculum vitae is available here: <a href="MWE_CV.pdf">MWE_CV</a>.</p>
 divert(0)dnl
 
+<h2>Research and teaching</h2>
+
+<p>During my graduate and postdoctoral years, I did: <a href="research.html">research in scientific computing</a> and <a href="teaching.html">taught some undergraduate math courses</a>.</p>
+
 <h2>Education</h2>
 
 <table>

@@ -90,6 +90,7 @@ divert(0)
 
 <img style="float: right; margin: 1em;" src="http://www.math.ualberta.ca/~adawson/kw/images/knapweed.gif"/>
 
+divert(-1)
 <h3>The Invasive Spotted Knapweed Takeover</h3>
 
 <p>As part of an outreach program at the University of Alberta, I
@@ -113,6 +114,7 @@ built to help students visualise the Riemann sum.</p>
 href="http://d3js.org/">d3</a> engine -- all one needs to view and
 interact with this tool is a modern web browser (no extra plugins are
 required).</p>
+divert(0)
 
 <h3>Integration as a Riemann sum</h3>
 
