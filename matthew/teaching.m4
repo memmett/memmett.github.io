@@ -88,9 +88,9 @@ divert(0)
 
 <h2>Outreach</h2>
 
+divert(-1)
 <img style="float: right; margin: 1em;" src="http://www.math.ualberta.ca/~adawson/kw/images/knapweed.gif"/>
 
-divert(-1)
 <h3>The Invasive Spotted Knapweed Takeover</h3>
 
 <p>As part of an outreach program at the University of Alberta, I
